@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <title>Ebrar Tabak | Portfolyo</title>
     <style>
-        body { margin: 0; background-color: #ff9800; font-family: sans-serif; }
-        nav { display: flex; justify-content: center; gap: 20px; padding: 20px; background: rgba(0,0,0,0.1); }
-        nav a { text-decoration: none; color: white; font-weight: bold; transition: 0.3s; }
-        nav a:hover { transform: scale(1.2); }
-        .hero { display: flex; justify-content: center; align-items: center; height: 80vh; }
-        h1 { color: white; font-size: 3rem; }
+        body { margin: 0; display: flex; height: 100vh; font-family: 'Segoe UI', sans-serif; background: #333; }
+        .sidebar { width: 250px; background: #000; color: white; padding: 40px; display: flex; flex-direction: column; }
+        .logo { background: #ffc107; color: black; padding: 20px; font-weight: bold; margin-bottom: 40px; text-align: center; }
+        .menu a { color: white; text-decoration: none; display: block; margin-bottom: 20px; font-size: 1.2rem; transition: 0.3s; }
+        .menu a:hover { color: #ffc107; padding-left: 10px; }
+        .main { flex: 1; display: flex; align-items: flex-end; padding: 50px; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.imgur.com/vHqJ20A.jpg'); background-size: cover; background-position: center; color: white; }
+        h1 { font-size: 3rem; margin: 0; }
+        p { font-size: 1.5rem; opacity: 0.8; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="hakkimda.html">Hakkımda</a>
-        <a href="projeler.html">Projeler</a>
-        <a href="sertifikalar.html">Sertifikalar</a>
-        <a href="iletisim.html">İletişim</a>
-    </nav>
-    <div class="hero">
-        <h1>Ebrar Tabak</h1>
+    <div class="sidebar">
+        <div class="logo">EBRAR TABAK</div>
+        <div class="menu">
+            <a href="index.html">ANASAYFA</a>
+            <a href="hakkimda.html">HAKKIMDA</a>
+            <a href="projeler.html">PROJELER</a>
+            <a href="sertifikalar.html">SERTİFİKALAR</a>
+            <a href="iletisim.html">İLETİŞİM</a>
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <h1>MERHABA, BEN<br>EBRAR TABAK</h1>
+            <p>Bilişim Sistemleri Öğrencisi</p>
+        </div>
     </div>
 </body>
 </html>
