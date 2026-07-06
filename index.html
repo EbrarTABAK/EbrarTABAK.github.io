@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <title>Ebrar Tabak | Portfolyo</title>
     <style>
-        body { margin: 0; display: flex; height: 100vh; font-family: 'Segoe UI', sans-serif; background: #333; }
-        .sidebar { width: 250px; background: #000; color: white; padding: 40px; display: flex; flex-direction: column; }
-        .logo { background: #ffc107; color: black; padding: 20px; font-weight: bold; margin-bottom: 40px; text-align: center; }
-        .menu a { color: white; text-decoration: none; display: block; margin-bottom: 20px; font-size: 1.2rem; transition: 0.3s; }
+        body { margin: 0; display: flex; height: 100vh; font-family: sans-serif; background: #000; }
+        .sidebar { width: 250px; background: #000; border-right: 2px solid #ffc107; padding: 40px; display: flex; flex-direction: column; }
+        .logo { background: #ffc107; color: #000; padding: 20px; font-weight: bold; margin-bottom: 40px; text-align: center; }
+        .menu a { color: #fff; text-decoration: none; display: block; margin-bottom: 25px; font-size: 1.3rem; transition: 0.3s; }
         .menu a:hover { color: #ffc107; padding-left: 10px; }
-        .main { flex: 1; display: flex; align-items: flex-end; padding: 50px; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.imgur.com/vHqJ20A.jpg'); background-size: cover; background-position: center; color: white; }
-        h1 { font-size: 3rem; margin: 0; }
-        p { font-size: 1.5rem; opacity: 0.8; }
+        .main { flex: 1; display: flex; align-items: center; justify-content: center; background: url('profil.jpg') no-repeat center center/cover; }
+        .overlay { background: rgba(0,0,0,0.6); padding: 40px; color: #ffc107; text-align: center; border: 2px solid #ffc107; }
     </style>
 </head>
 <body>
@@ -26,9 +25,8 @@
         </div>
     </div>
     <div class="main">
-        <div>
+        <div class="overlay">
             <h1>MERHABA, BEN<br>EBRAR TABAK</h1>
-            <p>Bilişim Sistemleri Öğrencisi</p>
         </div>
     </div>
 </body>
