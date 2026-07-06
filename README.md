@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <title>Ebrar Tabak | Portfolyo</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; padding: 50px; }
-        h1 { color: #333; }
-        p { color: #666; font-size: 18px; }
-        .kutu { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0px 0px 10px #ccc; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f0f2f5; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+        }
+        .kutu { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 { color: #2c3e50; }
+        p { color: #7f8c8d; line-height: 1.6; }
     </style>
 </head>
 <body>
     <div class="kutu">
         <h1>Merhaba, ben Ebrar Tabak</h1>
-        <p>Bilgi Sistemleri öğrencisiyim ve kendi sitemi yapıyorum!</p>
+        <p>Bilgi Sistemleri öğrencisiyim. Geleceğin teknolojilerini öğrenmeye ve projeler geliştirmeye tutkuluyum.</p>
     </div>
 </body>
 </html>
