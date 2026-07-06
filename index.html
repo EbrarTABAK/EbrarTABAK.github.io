@@ -4,40 +4,53 @@
     <meta charset="UTF-8">
     <title>Ebrar Tabak | Portfolyo</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .header { text-align: center; }
-        .header img { width: 150px; border-radius: 50%; border: 5px solid #f4f7f6; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 30px; }
-        ul { list-style-type: none; padding: 0; }
-        li { background: #f9f9f9; margin: 5px 0; padding: 10px; border-radius: 5px; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        nav { background: #2c3e50; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #3498db; }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .header img { width: 150px; border-radius: 50%; display: block; margin: 0 auto 20px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#sertifikalar">Sertifikalar</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
     <div class="container">
-        <div class="header">
-            <!-- BURAYA FOTOĞRAF LİNKİ GELECEK -->
+        <section id="hakkimda" class="header">
             <img src="https://i.imgur.com/vHqJ20A.jpg" alt="Ebrar Tabak">
             <h1>Ebrar Tabak</h1>
             <p>Bilişim Sistemleri ve Bilgisayar Teknolojileri Öğrencisi</p>
-            <p>📧 tabakebrar404@gmail.com | 📍 İstanbul/Pendik</p>
-        </div>
+            <p>Bilişim Sistemleri 3. sınıf öğrencisiyim. Ağ teknolojileri, Cisco sistemleri ve yazılım geliştirme alanlarında teorik bilgimi uygulamalı projelerle geliştirmekteyim.</p>
+        </section>
 
-        <h2>Profil</h2>
-        <p>Bilişim Sistemleri 3. sınıf öğrencisiyim. Ağ teknolojileri, Cisco sistemleri ve yazılım geliştirme alanlarında teorik bilgimi uygulamalı projelerle geliştirmekteyim.</p>
+        <section id="projeler">
+            <h2>Projeler</h2>
+            <p><strong>Akıllı Tarım:</strong> Yapay zeka destekli gübreleme ve sulama sistemi (TÜBİTAK proje çalışması).</p>
+            <p><strong>Cisco Ağ Topolojileri:</strong> VLAN, STP, Static Routing ve EtherChannel uygulamaları.</p>
+        </section>
 
-        <h2>Projeler</h2>
-        <ul>
-            <li><strong>Akıllı Tarım:</strong> Yapay zeka destekli gübreleme ve sulama sistemi (TÜBİTAK).</li>
-            <li><strong>Cisco Ağ Topolojileri:</strong> VLAN, STP, Static Routing ve EtherChannel yapılandırmaları.</li>
-        </ul>
+        <section id="sertifikalar">
+            <h2>Sertifikalar</h2>
+            <ul>
+                <li>CCNA: Introduction to Networks (CCNA1)</li>
+                <li>CCNA3: Enterprise Networking, Security and Automation</li>
+                <li>Cisco Packet Tracer Sertifikası</li>
+            </ul>
+        </section>
 
-        <h2>Sertifikalar</h2>
-        <ul>
-            <li>CCNA: Introduction to Networks (CCNA1)</li>
-            <li>CCNA3: Enterprise Networking, Security and Automation</li>
-            <li>Cisco Packet Tracer Sertifikası</li>
-        </ul>
+        <section id="iletisim">
+            <h2>İletişim</h2>
+            <p>📧 Email: tabakebrar404@gmail.com</p>
+            <p>📍 Lokasyon: İstanbul/Pendik</p>
+        </section>
     </div>
+
 </body>
 </html>
