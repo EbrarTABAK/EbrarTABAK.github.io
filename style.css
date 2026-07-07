@@ -242,4 +242,6 @@ nav ul li a:hover, nav ul li a.active {
     .container { padding: 20px 4%; }
     .content-card { padding: 30px 20px; }
 }
+body { background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); min-height: 100vh; margin: 0; font-family: sans-serif; }
+
 
