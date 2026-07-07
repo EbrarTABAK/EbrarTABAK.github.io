@@ -1,6 +1,232 @@
 <!DOCTYPE html>
-<html lang="tr"><head><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><title>Ebrar Tabak</title></head>
-<body><nav><div class="logo">EBRAR TABAK</div><ul><li><a href="index.html" class="active">ANASAYFA</a></li><li><a href="hakkimda.html">HAKKIMDA</a></li><li><a href="projecht.html">PROJELERİM</a></li><li><a href="sertifikalacht.html">SERTİFİKALAR</a></li><li><a href="iletisim.html">İLETİŞİM</a></li></ul></nav>
-<div class="container"><div class="content-card hero-layout">
-<div class="hero-text"><h1>Ebrar Tabak</h1><p style="color:#FF4E50; font-weight:bold;">Bilişim Sistemleri ve Teknolojileri Öğrencisi</p><p>IoT, siber güvenlik ve mobil uygulama geliştirme tutkunu.</p></div>
-<img src="profil.jpg" class="profile-circle" alt="Ebrar Tabak"></div></div></body></html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sayfası | Adı Soyadı</title> <style>
+        /* --- GENEL AYARLAR --- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+            background-color: #1a1a1a; /* Sayfanın en arkası için koyu gri */
+            color: white;
+        }
+
+        /* --- KAPSAYICI --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* --- ÜST BÖLÜM (Koyu Kısım) --- */
+        header {
+            background-color: #000000; /* Üst bölüm için tam siyah */
+            width: 100%;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            border-bottom: 1px solid #333;
+        }
+
+        /* Logo Kutusu (Sol Üst) */
+        .logo-box {
+            width: 60px; /* Logo boyutunu isteğine göre değiştir */
+            height: 60px;
+            background-color: #e62e2e; /* Kırmızı renk */
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50px;
+            border-radius: 5px; /* Hafif yuvarlak köşeler */
+        }
+
+        /* Metin Alanı (Sol Orta) */
+        .hero-text {
+            flex: 1;
+            margin-left: 50px;
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .hero-text h1 .highlight {
+            color: #e62e2e; /* Kırmızı renkli vurgu */
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: #ccc;
+            margin-top: 20px;
+        }
+
+        /* Proje Butonu */
+        .btn-projeler {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px; /* Yuvarlak düğme */
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-projeler:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Profil Fotoğrafı (Sağ) */
+        .profil-container {
+            flex-shrink: 0;
+            margin-right: 50px;
+        }
+
+        .profil-container img {
+            width: 300px; /* Fotoğraf boyutunu isteğine göre değiştir */
+            height: 300px;
+            border-radius: 50%; /* Dairesel fotoğraf */
+            object-fit: cover;
+            border: 5px solid #333;
+        }
+
+        /* Hamburger Menü (Sağ Üst) */
+        .menu-icon {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        /* --- ALT BÖLÜM (Kırmızı Kısım) --- */
+        .features-section {
+            background-color: #e62e2e; /* Kırmızı renk */
+            width: 100%;
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+            margin-top: -1px; /* Üst kısımla boşluğu kapat */
+        }
+
+        .feature-box {
+            width: 30%; /* Her kutu yaklaşık 1/3 genişlikte */
+            color: white;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: #ffecec; /* Kırmızı üzerine daha açık ton */
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        /* --- CEP TELEFONU GÖRÜNÜMÜ (Responsive) --- */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+            }
+            .logo-box {
+                margin: 0 auto 20px auto;
+            }
+            .hero-text {
+                margin: 0;
+                max-width: 90%;
+            }
+            .hero-text h1 {
+                font-size: 40px;
+            }
+            .profil-container {
+                margin: 30px 0 0 0;
+            }
+            .profil-container img {
+                width: 200px;
+                height: 200px;
+            }
+            .menu-icon {
+                top: 20px;
+                right: 20px;
+            }
+
+            .features-section {
+                flex-direction: column;
+                padding: 40px 20px;
+            }
+            .feature-box {
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            AL </div>
+
+        <div class="hero-text">
+            <h1>
+                Merhaba, <br>
+                Ben<br>
+                <span class="highlight">Adı Soyadı</span> </h1>
+            <p>Proje Açıklaması</p> <a href="#" class="btn-projeler">Projeler</a>
+        </div>
+
+        <div class="profil-container">
+            <img src="profil.jpg" alt="Profil Fotoğrafı"> </div>
+
+        <div class="menu-icon">&#9776;</div>
+    </header>
+
+    <section class="features-section">
+        <div class="feature-box">
+            <div class="feature-icon">💻</div> <div class="feature-title">Web Tasarım</div>
+            <div class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris arcu.</div>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">✒️</div> <div class="feature-title">Logo Tasarım</div>
+            <div class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris arcu.</div>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">🗂️</div> <div class="feature-title">SEO Çalışmaları</div> <div class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris arcu.</div>
+        </div>
+    </section>
+
+</body>
+</html>
