@@ -2,30 +2,44 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Ebrar Tabak | Portfolyo</title>
-    <style>
-        body { margin: 0; display: flex; height: 100vh; font-family: 'Segoe UI', sans-serif; background: #f0f4f8; }
-        .sidebar { width: 250px; background: #e2e8f0; border-right: 2px solid #3182ce; padding: 40px; display: flex; flex-direction: column; }
-        .logo { background: #3182ce; color: #fff; padding: 20px; font-weight: bold; margin-bottom: 40px; text-align: center; border-radius: 5px; }
-        .menu a { color: #2d3748; text-decoration: none; display: block; margin-bottom: 25px; font-size: 1.3rem; transition: 0.3s; }
-        .menu a:hover { color: #3182ce; padding-left: 10px; }
-        .main { flex: 1; display: flex; align-items: center; justify-content: center; background: url('profil.jpg') no-repeat center center/cover; }
-        .text-container { color: #ffffff; text-align: center; font-size: 3rem; font-weight: bold; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebrar Tabak | Anasayfa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">EBRAR TABAK</div>
-        <div class="menu">
-            <a href="index.html">ANASAYFA</a>
-            <a href="hakkimda.html">HAKKIMDA</a>
-            <a href="projeler.html">PROJELER</a>
-            <a href="sertifikalar.html">SERTİFİKALAR</a>
-            <a href="iletisim.html">İLETİŞİM</a>
+
+    <nav>
+        <div class="logo">Ebrar Tabak</div>
+        <ul>
+            <li><a href="index.html" class="active">ANASAYFA</a></li>
+            <li><a href="hakkimda.html">HAKKIMDA</a></li>
+            <li><a href="projecht.html">PROJELERİM</a></li>
+            <li><a href="sertifikalacht.html">SERTİFİKALAR</a></li>
+            <li><a href="iletisim.html">İLETİŞİM</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content-card">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <span class="badge">Merhaba, Ben</span>
+                    <h1>Ebrar Tabak</h1>
+                    <div class="meslek">Bilgi Sistemleri ve Teknolojileri Öğrencisi</div>
+                    <p>Burdur Mehmet Akif Ersoy Üniversitesi'nde 3. sınıf öğrencisiyim. Nesnelerin İnterneti (IoT), siber güvenlik ve mobil uygulama geliştirme alanlarında projeler üretiyorum.</p>
+                    
+                    <div class="contact-mini">
+                        <p>✉ ebrar.tabak@example.com</p>
+                        <p>📍 Burdur / Türkiye</p>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Klasöründeki profil.jpg'yi otomatik çeker -->
+                    <img src="profil.jpg" alt="Ebrar Tabak" class="profile-circle">
+                </div>
+            </div>
         </div>
     </div>
-    <div class="main">
-        <div class="text-container">MERHABA, BEN<br>EBRAR TABAK</div>
-    </div>
+
 </body>
 </html>
