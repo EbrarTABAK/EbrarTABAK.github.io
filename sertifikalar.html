@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <title>Sertifikalar | Ebrar Tabak</title>
     <style>
-        body { margin: 0; padding: 40px; font-family: sans-serif; background-color: #f0f4f8; color: #2d3748; }
-        h1 { color: #3182ce; border-bottom: 3px solid #3182ce; display: inline-block; padding-bottom: 10px; }
-        ul { list-style-type: none; padding: 0; }
-        li { font-size: 1.2rem; margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #3182ce; }
-        .back-btn { background: #3182ce; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 30px; }
+        body { background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); min-height: 100vh; margin: 0; font-family: sans-serif; }
+        nav { background: rgba(0,0,0,0.2); padding: 20px; text-align: center; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .container { padding: 40px; display: flex; justify-content: center; }
+        .content-card { background: #fff; padding: 40px; border-radius: 20px; max-width: 800px; width: 100%; }
+        .section-box { background: #f9f9f9; padding: 30px; border-radius: 20px; margin-bottom: 20px; border-left: 8px solid #FF8C00; }
+        .section-box h3 { color: #FF8C00; margin-bottom: 15px; }
     </style>
 </head>
 <body>
-    <h1>Sertifikalar</h1>
-    <ul>
-        <li>Cisco Networking Academy - CCNA: Introduction to Networks (CCNA1)</li>
-        <li>Cisco Networking Academy - CCNA: Switching, Routing, and Wireless Essentials (CCNA2)</li>
-        <li>Cisco Networking Academy - CCNA3: Enterprise Networking, Security and Automation (ENSA)</li>
-        <li>Cisco Networking Academy - Introduction to Cybersecurity</li>
-    </ul>
-    <a href="index.html" class="back-btn">ANA SAYFAYA DÖN</a>
+    <nav><ul><li><a href="index.html">ANASAYFA</a></li><li><a href="hakkimda.html">HAKKIMDA</a></li><li><a href="projecht.html">PROJELERİM</a></li><li><a href="sertifikalacht.html">SERTİFİKALAR</a></li><li><a href="iletisim.html">İLETİŞİM</a></li></ul></nav>
+    <div class="container"><div class="content-card">
+        <h2 style="text-align:center;">Sertifikalarım</h2>
+        <div class="section-box"><h3>Cisco - CCNA (Ağ Teknolojileri)</h3><p>Ağ kurulumu, yapılandırması ve yönetimi üzerine yetkinlik sertifikası.</p></div>
+        <div class="section-box"><h3>İş Sağlığı ve Güvenliği (İSG)</h3><p>MEB onaylı temel iş sağlığı ve güvenliği eğitimi sertifikası.</p></div>
+    </div></div>
 </body>
 </html>
