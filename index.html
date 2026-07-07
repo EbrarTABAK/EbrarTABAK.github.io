@@ -3,229 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel Web Sayfası | EBRAR TABAK </title> <style>
+    <title>Kişisel Web Sayfası | EBRAR TABAK</title>
+    <style>
         /* --- GENEL AYARLAR --- */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            height: 100%;
-            background-color: #1a1a1a; /* Sayfanın en arkası için koyu gri */
-            color: white;
-        }
+        body, html { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: white; height: 100%; }
+        
+        /* --- HEADER --- */
+        header { background-color: #000; width: 100%; padding: 40px 0; display: flex; justify-content: space-between; align-items: center; position: relative; border-bottom: 1px solid #333; }
+        .logo-box { width: 60px; height: 60px; background-color: #e62e2e; color: white; font-weight: bold; font-size: 30px; display: flex; justify-content: center; align-items: center; margin-left: 50px; border-radius: 5px; }
+        .hero-text { flex: 1; margin-left: 50px; max-width: 500px; }
+        .hero-text h1 { font-size: 60px; line-height: 1.2; margin: 0; }
+        .highlight { color: #e62e2e; }
+        .btn-projeler { display: inline-block; margin-top: 30px; padding: 15px 40px; border: 2px solid white; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; }
+        .btn-projeler:hover { background-color: white; color: black; }
+        .profil-container { flex-shrink: 0; margin-right: 50px; }
+        .profil-container img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 5px solid #333; }
 
-        /* --- KAPSAYICI --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+        /* --- MENÜ (Overlay) --- */
+        .menu-icon { font-size: 30px; cursor: pointer; color: #ccc; margin-right: 50px; }
+        .overlay { height: 0; width: 100%; position: fixed; z-index: 10; top: 0; left: 0; background-color: rgba(0,0,0, 0.95); overflow-y: hidden; transition: 0.5s; }
+        .overlay-content { position: relative; top: 25%; width: 100%; text-align: center; }
+        .overlay a { padding: 15px; text-decoration: none; font-size: 36px; color: #818181; display: block; transition: 0.3s; }
+        .overlay a:hover { color: #f1f1f1; }
+        .overlay .closebtn { position: absolute; top: 20px; right: 45px; font-size: 60px; }
 
-        /* --- ÜST BÖLÜM (Koyu Kısım) --- */
-        header {
-            background-color: #000000; /* Üst bölüm için tam siyah */
-            width: 100%;
-            padding: 40px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            border-bottom: 1px solid #333;
-        }
+        /* --- ALT BÖLÜM --- */
+        .features-section { background-color: #e62e2e; padding: 80px 0; display: flex; justify-content: space-around; text-align: left; }
+        .feature-box { width: 30%; color: white; padding: 0 20px; }
+        .feature-icon { font-size: 40px; margin-bottom: 20px; }
+        .feature-title { font-size: 24px; font-weight: bold; }
+        .feature-desc { font-size: 14px; color: #ffecec; margin-top: 15px; line-height: 1.6; }
 
-        /* Logo Kutusu (Sol Üst) */
-        .logo-box {
-            width: 60px; /* Logo boyutunu isteğine göre değiştir */
-            height: 60px;
-            background-color: #e62e2e; /* Kırmızı renk */
-            color: white;
-            font-weight: bold;
-            font-size: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 50px;
-            border-radius: 5px; /* Hafif yuvarlak köşeler */
-        }
-
-        /* Metin Alanı (Sol Orta) */
-        .hero-text {
-            flex: 1;
-            margin-left: 50px;
-            max-width: 500px;
-        }
-
-        .hero-text h1 {
-            font-size: 60px;
-            line-height: 1.2;
-            margin: 0;
-        }
-
-        .hero-text h1 .highlight {
-            color: #e62e2e; /* Kırmızı renkli vurgu */
-        }
-
-        .hero-text p {
-            font-size: 16px;
-            color: #ccc;
-            margin-top: 20px;
-        }
-
-        /* Proje Butonu */
-        .btn-projeler {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            border: 2px solid white;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px; /* Yuvarlak düğme */
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-projeler:hover {
-            background-color: white;
-            color: black;
-        }
-
-        /* Profil Fotoğrafı (Sağ) */
-        .profil-container {
-            flex-shrink: 0;
-            margin-right: 50px;
-        }
-
-        .profil-container img {
-            width: 300px; /* Fotoğraf boyutunu isteğine göre değiştir */
-            height: 300px;
-            border-radius: 50%; /* Dairesel fotoğraf */
-            object-fit: cover;
-            border: 5px solid #333;
-        }
-
-        /* Hamburger Menü (Sağ Üst) */
-        .menu-icon {
-            position: absolute;
-            top: 50px;
-            right: 50px;
-            font-size: 30px;
-            cursor: pointer;
-            color: #ccc;
-        }
-
-        /* --- ALT BÖLÜM (Kırmızı Kısım) --- */
-        .features-section {
-            background-color: #e62e2e; /* Kırmızı renk */
-            width: 100%;
-            padding: 80px 0;
-            display: flex;
-            justify-content: space-around;
-            text-align: left;
-            margin-top: -1px; /* Üst kısımla boşluğu kapat */
-        }
-
-        .feature-box {
-            width: 30%; /* Her kutu yaklaşık 1/3 genişlikte */
-            color: white;
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .feature-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .feature-desc {
-            font-size: 14px;
-            color: #ffecec; /* Kırmızı üzerine daha açık ton */
-            margin-top: 15px;
-            line-height: 1.6;
-        }
-
-        /* --- CEP TELEFONU GÖRÜNÜMÜ (Responsive) --- */
+        /* --- MOBİL --- */
         @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px 0;
-            }
-            .logo-box {
-                margin: 0 auto 20px auto;
-            }
-            .hero-text {
-                margin: 0;
-                max-width: 90%;
-            }
-            .hero-text h1 {
-                font-size: 40px;
-            }
-            .profil-container {
-                margin: 30px 0 0 0;
-            }
-            .profil-container img {
-                width: 200px;
-                height: 200px;
-            }
-            .menu-icon {
-                top: 20px;
-                right: 20px;
-            }
-
-            .features-section {
-                flex-direction: column;
-                padding: 40px 20px;
-            }
-            .feature-box {
-                width: 100%;
-                margin-bottom: 40px;
-                text-align: center;
-            }
+            header { flex-direction: column; text-align: center; }
+            .logo-box { margin: 0 auto 20px auto; }
+            .hero-text { margin: 0; max-width: 90%; }
+            .profil-container { margin: 30px 0; }
+            .features-section { flex-direction: column; padding: 40px 20px; }
+            .feature-box { width: 100%; margin-bottom: 40px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-box">
-            ET </div>
-
+        <div class="logo-box">ET</div>
         <div class="hero-text">
-            <h1>
-                Merhaba, <br>
-                
-                Ben<br>
-                <span class="highlight">EBRAR TABAK </span> </h1>
-            <p>Proje Açıklaması</p> <a href="projeler.html" class="btn-projeler">Projeler</a>
+            <h1>Merhaba, <br> Ben <span class="highlight">EBRAR TABAK</span></h1>
+            <p>Proje Açıklaması</p>
+            <a href="projeler.html" class="btn-projeler">Projeler</a>
         </div>
-
         <div class="profil-container">
-            <img src="profil.jpg" alt="Profil Fotoğrafı"> </div>
-
-        <div class="menu-icon">&#9776;</div>
+            <img src="profil.jpg" alt="Profil Fotoğrafı">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </header>
+
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+      <div class="overlay-content">
+        <a href="hakkimda.html">Hakkımda</a>
+        <a href="iletisim.html">İletişim</a>
+        <a href="sertifikalar.html">Sertifikalar</a>
+      </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("myNav");
+            if (nav.style.height === "100%") {
+                nav.style.height = "0%";
+            } else {
+                nav.style.height = "100%";
+            }
+        }
+    </script>
 
     <section class="features-section">
         <div class="feature-box">
-            <div class="feature-icon">💻</div> <div class="feature-title">OTOMASYON Ve GÖMÜLÜ SİSTEMLER</div>
-            <div class="feature-desc">Siemens TIA Portal üzerinden PLC programlama ve donanım köfigürasyonuve STM32 platformunda mikrodenetleyici tabanlı yazılım geliştirme süreçleri. </div>
+            <div class="feature-icon">💻</div>
+            <div class="feature-title">OTOMASYON VE GÖMÜLÜ SİSTEMLER</div>
+            <div class="feature-desc">Siemens TIA Portal üzerinden PLC programlama ve donanım konfigürasyonu ve STM32 platformunda mikrodenetleyici tabanlı yazılım geliştirme süreçleri.</div>
         </div>
-
         <div class="feature-box">
-            <div class="feature-icon">✒️</div> <div class="feature-title">YAZILIM</div>
-            <div class="feature-desc">C#,PHP,PYTHON,SQL;HTML/CSS.</div>
+            <div class="feature-icon">✒️</div>
+            <div class="feature-title">YAZILIM</div>
+            <div class="feature-desc">C#, PHP, PYTHON, SQL; HTML/CSS.</div>
         </div>
-
         <div class="feature-box">
-            <div class="feature-icon">🗂️</div> <div class="feature-title">NETWORK ÇALIŞMALARI </div> <div class="feature-desc">VLAN yapılandırmaları,STP uygulamaları,Static Routing yapılandırmalrı,Etherchannel bağlantıları,Router ve Switch konfigurasyonları.</div>
+            <div class="feature-icon">🗂️</div>
+            <div class="feature-title">NETWORK ÇALIŞMALARI</div>
+            <div class="feature-desc">VLAN yapılandırmaları, STP uygulamaları, Static Routing yapılandırmaları, Etherchannel bağlantıları, Router ve Switch konfigürasyonları.</div>
         </div>
     </section>
 
