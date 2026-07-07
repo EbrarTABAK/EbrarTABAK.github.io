@@ -2,18 +2,70 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımda | Ebrar Tabak</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { margin: 0; padding: 40px; font-family: sans-serif; background-color: #f0f4f8; color: #2d3748; }
-        h1 { color: #3182ce; border-bottom: 3px solid #3182ce; display: inline-block; padding-bottom: 10px; }
-        p { font-size: 1.2rem; line-height: 1.6; margin-bottom: 20px; }
-        .back-btn { background: #3182ce; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 30px; }
+        /* Menüsüz sade görünüm için */
+        body {
+            display: block;
+            padding: 50px 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .content-card {
+            max-width: 800px;
+            text-align: left;
+        }
+        .section-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border-left: 8px solid #FF8C00;
+        }
+        .section-box h3 {
+            color: #FF8C00;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+            color: #444;
+        }
     </style>
 </head>
 <body>
-    <h1>Hakkımda</h1>
-    <p>Bilişim Sistemleri ve Bilgisayar Teknolojileri bölümü 4.sınıf öğrencisiyim. Ağ teknolojileri, Cisco sistemleri ve yazılım geliştirme alanlarında teorik bilgimi uygulamalı projelerle geliştirmekteyim. Özellikle Cisco ağ teknolojileri, ağ güvenliği ve sistem yapılandırmaları üzerine kendimi geliştirmeye odaklanıyorum. Teknik bilgimi gerçek projelerde kullanarak sektörde güçlü bir kariyer oluşturmayı hedefliyorum</p>
-    <p><strong>Eğitim:</strong> Burdur Mehmet Akif Ersoy Üniversitesi - Gölhisar Uygulamalı Bilimler Yüksekokulu (2023 - Devam Ediyor).</p>
-    <a href="index.html" class="back-btn">ANA SAYFAYA DÖN</a>
+
+    <div class="container">
+        <div class="content-card">
+            <h2 class="page-title" style="text-align: center; display: block; margin-bottom: 40px;">Hakkımda</h2>
+            
+            <!-- Profil Bölümü -->
+            <div class="section-box">
+                <h3>👤 PROFİL</h3>
+                <p>Bilişim Sistemleri ve Bilgisayar Teknolojileri bölümü 3. sınıf öğrencisiyim. Ağ teknolojileri, Cisco sistemleri ve yazılım geliştirme alanlarında teorik bilgimi uygulamalı projelerle geliştirmekteyim. Özellikle Cisco ağ teknolojileri, ağ güvenliği ve sistem yapılandırmaları üzerine kendimi geliştirmeye odaklanıyorum. Teknik bilgimi gerçek projelerde kullanarak sektörde güçlü bir kariyer oluşturmayı hedefliyorum.</p>
+            </div>
+
+            <!-- Eğitim Bölümü -->
+            <div class="section-box">
+                <h3>🎓 EĞİTİM</h3>
+                <p><strong>BURDUR MEHMET AKİF ERSOY ÜNİVERSİTESİ</strong></p>
+                <ul>
+                    <li>Gölhisar Uygulamalı Bilimler Yüksekokulu</li>
+                    <li>Bilişim Sistemleri ve Bilgisayar Teknolojileri</li>
+                    <li>2023 - Devam Ediyor (3. Sınıf)</li>
+                    <li>Ağ teknolojileri ve sistem yönetimi dersleri</li>
+                    <li>Yazılım geliştirme çalışmaları (C#, PHP, SQL)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
