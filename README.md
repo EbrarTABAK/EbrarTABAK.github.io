@@ -31,6 +31,8 @@
         <h1>Merhaba, ben Ebrar Tabak</h1>
         <p>Bilgi Sistemleri öğrencisiyim. Geleceğin teknolojilerini öğrenmeye ve projeler geliştirmeye tutkuluyum.</p>
         echo "this is vscode "
+        echo "is the github "
+        
     </div>
 </body>
 </html>
