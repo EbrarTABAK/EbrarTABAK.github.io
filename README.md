@@ -30,6 +30,7 @@
     <div class="kutu">
         <h1>Merhaba, ben Ebrar Tabak</h1>
         <p>Bilgi Sistemleri öğrencisiyim. Geleceğin teknolojilerini öğrenmeye ve projeler geliştirmeye tutkuluyum.</p>
+        echo "this is vscode "
     </div>
 </body>
 </html>
